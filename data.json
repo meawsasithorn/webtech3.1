@@ -1,0 +1,169 @@
+[{
+	"img": "<img src='image/logokcon.gif' >",
+	"q": "SEVENTEEN อยู่สังกัดค่ายอะไร",
+	"a" : "Pledis",
+	"b" : "Cube",
+	"c" : "SM",
+	"d" : "YG",
+	"ans": "a"
+},{
+	"img": "<img src='image/dc.jpg' >",
+	"q": "SEVENTEEN มีสมาชิกทั้งหมดกี่คน",
+	"a" : "9",
+	"b" : "17",
+	"c" : "13",
+	"d" : "5",
+	"ans": "c"
+},{
+	"img": "<img src='image/seventeen_adoreu.gif' >",
+	"q": "SEVENTEEN Debut เมื่อวันที่เท่าไหร่",
+	"a" : "14 กุมภาพันธ์ 2015",
+	"b" : "14 กุมภาพันธ์ 2016",
+	"c" : "26 พฤษภาคม 2015",
+	"d" : "26 พฤษภาคม 2016",
+	"ans": "c"
+},{
+	"img": "<img src='image/carat.jpg' >",
+	"q": "แฟนคลับ SEVENTEEN มีชื่อเรียกว่าอะไร",
+	"a" : "VIP",
+	"b" : "Carat",
+	"c" : "Monbabe",
+	"d" : "Everlasting Friend",
+	"ans": "b"
+},{
+	"img": "<img src='image/svt.jpg' >",
+	"q": "SEVENTEEN มีกี่ Unit",
+	"a" : "0",
+	"b" : "1",
+	"c" : "2",
+	"d" : "3",
+	"ans": "d"
+},{
+	"img": "<img src='image/svt2.jpg'>",
+	"q": "ข้อไหนไม่ใช่ SEVENTEEN Unit",
+	"a" : "HipHop Team",
+	"b" : "Performance Team",
+	"c" : "Vocal Team",
+	"d" : "Dance Team",
+	"ans": "d"
+},{
+	"img": "<img src='image/jeonghan_al1.jpg'>",
+	"q": "ภาพนี้อยู่ใน teaser เพลงอะไร",
+	"a" : "Pretty U",
+	"b" : "Very Nice",
+	"c" : "Don't wanna cry",
+	"d" : "Adore U",
+	"ans": "c"
+},{
+	"img": "<img src='image/seventeen_sunset.jpg'>",
+	"q": "สมาชิกSEVENTEEN คนใดที่เป็นผู้แต่งเนื้อร้องและทำนองเพลง title ร่วมกับ Bumzu",
+	"a" : "Vernon",
+	"b" : "Woozi",
+	"c" : "S.Coups",
+	"d" : "Hoshi",
+	"ans": "b"
+},{
+	"img": "<img src='image/dwc.gif'>",
+	"q": "สมาชิกSEVENTEEN คนใดที่เป็นผู้ออกแบบท่าเต้นให้กับเพลง title",
+	"a" : "Vernon",
+	"b" : "Woozi",
+	"c" : "S.Coups",
+	"d" : "Hoshi",
+	"ans": "d"
+},{
+	"img": "<img src='image/seventeen1.jpg'>",
+	"q": "หัวหน้าวงของSEVENTEEN คือใคร",
+	"a" : "S.Coups",
+	"b" : "Jeonghan",
+	"c" : "Joshua",
+	"d" : "Jun",
+	"ans": "a"
+},{
+	"img": "<img src='image/diamondedge.jpg'>",
+	"q": "SEVENTEEN 1ST WORLD TOUR มีชื่อว่าอะไร",
+	"a" : "CARATLAND",
+	"b" : "Like SEVENTEEN",
+	"c" : "DIAMOND EDGE",
+	"d" : "Shining Diamond",
+	"ans": "c"
+},{
+	"img": "<img src='image/svt_cl.png'>",
+	"q": "SEVENTEEN Fan Meeting มีชื่อว่าอะไร",
+	"a" : "CARATLAND",
+	"b" : "Like SEVENTEEN",
+	"c" : "DIAMOND EDGE",
+	"d" : "Shining Diamond",
+	"ans": "a"
+},{
+	"img": "<img src='image/seventeen_clap.jpg'>",
+	"q": "ภาพนี้อยู่ในช่วงโปรโมทเพลงอะไร",
+	"a" : "Don't wanna cry",
+	"b" : "Manse",
+	"c" : "Boom Boom",
+	"d" : "Clap",
+	"ans": "d"
+},{
+	"img": "<img src='image/vocalteam.gif'>",
+	"q": "ข้อใดไม่ใช่เพลงของ Vocal Team",
+	"a" : "Habit",
+	"b" : "Healing",
+	"c" : "When I Grow up",
+	"d" : "20",
+	"ans": "b"
+},{
+	"img": "<img src='image/seventeen_dwc2.jpg' >",
+	"q": "4th Mini Album Al1 มีกี่เวอร์ชั่น",
+	"a" : "1",
+	"b" : "2",
+	"c" : "3",
+	"d" : "4",
+	"ans": "c"
+},{
+	"img": "<img src='image/seventeen.jpg' >",
+	"q": "Special Album มีชื่ออัลบั้มว่าอะไร",
+	"a" : "Director's Cut",
+	"b" : "LOVE&LETTER",
+	"c" : "Boys Be",
+	"d" : "Very Nice",
+	"ans": "a"
+},{
+	"img": "<img src='image/seventeen_nice.jpg' >",
+	"q": "สีประจำวง SEVENTEEN คือสีอะไร",
+	"a" : "Sapphire Blue",
+	"b" : "Rose Quartz & Serenity",
+	"c" : "Garnet",
+	"d" : "Hot Pink",
+	"ans": "b"
+},{
+	"img": "<img src='image/jeonghan.jpg' >",
+	"q": "คนในรูปนี้มีชื่อว่าอะไร",
+	"a" : "Woozi",
+	"b" : "Joshua",
+	"c" : "Jeonghan",
+	"d" : "Mingyu",
+	"ans": "c"
+},{
+	"img": "<img src='image/the8.jpg'>",
+	"q": "คนในรูปนี้มีชื่อว่าอะไร",
+	"a" : "The8",
+	"b" : "Jun",
+	"c" : "S.Coups",
+	"d" : "Wonwoo",
+	"ans": "a"
+},{
+	"img": "<img src='image/chan.jpg'>",
+	"q": "คนในรูปนี้มีชื่อว่าอะไร",
+	"a" : "Dino",
+	"b" : "DK",
+	"c" : "Hoshi",
+	"d" : "Seungkwan",
+	"ans": "a"
+},{
+	"img": "<img src='image/seok.jpg'>",
+	"q": "คนในรูปนี้มีชื่อว่าอะไร",
+	"a" : "Dino",
+	"b" : "DK",
+	"c" : "Hoshi",
+	"d" : "Seungkwan",
+	"ans": "b"
+}]

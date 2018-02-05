@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<link href="https://fonts.googleapis.com/css?family=Prompt|Roboto+Condensed" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<title>Seventeen Quiz &hearts;</title>
+
+	<style type="text/css">
+		body{
+			background-image: url(image_html/bg.png);
+			background-size: 100%;
+		    font-family: 'Roboto Condensed', sans-serif;
+		    font-family: 'Prompt', sans-serif;
+		}
+		.home{
+			/*display: none;*/
+		}
+
+		.home #header{
+			text-align: center;
+			size: 150%;
+			font-size: 120px;
+			text-shadow: 4px 3px #F7CAC9;
+			text-transform: capitalize;
+			/*color: #92A8D1;*/
+			color:   #f4eade;
+		}
+
+		.home #mid{
+			color: white;
+			text-align: center;
+			font-size: 58px;
+			border: 2px solid;
+			padding: 2em 1em;
+			margin-top: 57px;
+			margin-left: 460px;
+			width: 32%;
+		}
+
+		.home #button10{
+			background-color:  #c3d0ff;
+		    color: gray;
+		    padding: 15px 32px;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		    cursor: pointer;
+		    margin-left: 630px;
+		    margin-right: 20px;
+		    margin-top: 70px;
+		    border-radius: 8px;
+		}
+
+		.home #button20{
+			background-color:  #c3d0ff;
+		    color: gray;
+		    padding: 15px 32px;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		    cursor: pointer;
+		    margin-top: 70px;
+		    border-radius: 8px;
+		}
+
+		.quiz{
+			display: none;
+			border: 2px solid white;
+			margin-bottom: 0px;
+			padding: 1em;
+			align-items: center;
+			text-align: center;
+			font-size: 40px;
+
+		}
+
+		.quiz #a, #b,#c,#d{
+			background-color:  #F7CAC9;
+		    color: #33334d;
+		    padding: 15px 32px;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		    cursor: pointer;
+		    border-radius: 8px;
+		    width: 300px;
+		}
+
+		.result{
+			display: none;
+			position: all;
+			text-align: center;
+			border: 2px solid white;
+			margin-left: 200px;
+			margin-right: 200px;
+			margin-top: 80px;
+		}
+
+		.result #scoretxt{
+			font-size: 100px;
+			text-shadow: 3px 2px #F7CAC9;
+			color: #f4eade;
+		}
+
+		.result #finalscore{
+			font-size: 80px;
+			text-shadow: 3px 2px #F7CAC9;
+			color: #f4eade;			
+		}
+
+
+		.result #new{
+			background-color:  #F7CAC9;
+		    color: #33334d;
+		    padding: 15px 32px;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		    cursor: pointer;
+		    border-radius: 10px;
+		    width: 300px;
+		}
+
+		.quiz #time {
+		    /*height: 50px;
+		    width: 50px;
+		    background-color: #FFFFFF;
+		    border-radius: 50%;
+		    display: flex;*/
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="home" id="one">
+		<div id="header">
+			Quiz
+		</div>
+
+		<div id="mid">
+			S e v e n t e e n
+		</div>
+
+		<button id="button10" onclick="hidehome10()"> 10 ข้อ</button>
+		<button id="button20" onclick="hidehome20()"> 20 ข้อ</button>
+	</div>
+
+	<div class="quiz" id="two">
+		<p id="time"></p>
+		<p id="image"></p>
+		<p id="q"></p>
+		<button id="a" onclick="clicka()" > a</button>
+		<button id="b" onclick="clickb()" > b</button>
+		<button id="c" onclick="clickc()" > c</button>
+		<button id="d" onclick="clickd()" > d</button>
+
+	</div>
+
+	<div class="result" id="three">
+		<p id="scoretxt">SCORE</p>
+		<p id="finalscore"></p>
+		<button id="new" onclick="showhome()" > New Game </button>
+	</div>
+
+	<script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+	<script>
+		var score = 0, num = 0, count = 0, t;
+		var questions;
+		list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+		var selected = [];
+		var answers = [];
+		var timeout;
+
+		$(document).ready(function(){
+			$.ajax({
+				url: 'data.json',
+				method: 'GET',
+				dataType:'json',
+				success: function(response){
+					questions = response;
+				}
+			});
+		});
+
+		function showhome() {
+		    document.getElementById("one").style.display = "block";
+		    document.getElementById("three").style.display = "none";
+			score = 0, num = 0, count = 0;
+			list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+			selected = [];
+			answers = [];
+		}
+
+		function hidehome10() {
+			num = 10;
+		    document.getElementById("one").style.display = "none";
+		    document.getElementById("two").style.display = "block";
+		    change()
+		}
+
+		function hidehome20() {
+			num = 20;
+		    document.getElementById("one").style.display = "none";
+		    document.getElementById("two").style.display = "block";
+		    change()
+		}
+
+		function clicka(){
+			selected.push("a");
+			change();
+		}
+
+		function clickb(){
+			selected.push("b");
+			change();
+		}
+
+		function clickc(){
+			selected.push("c");
+			change();
+		}
+
+		function clickd(){
+			selected.push("d");
+			change();
+		}
+
+		function countdown(){
+			t -= 1;
+			if (t <= 0){
+				change();
+			}
+
+			document.getElementById("time").innerHTML = t.toString();
+			timeout = setTimeout("countdown()", 1000);
+		}
+
+		function remove(array, element) {
+    		const index = array.indexOf(element);
+    		console.log(index);
+		    if (index !== -1) {
+		        array.splice(index, 1);
+		        console.log(array);
+		    }
+		}
+
+		function change() {
+			t = 20;
+			countdown();
+
+		    var i = Math.floor(Math.random() * list.length-1);
+		    document.getElementById("image").innerHTML = questions[list[i]].img;
+		    document.getElementById("q").innerHTML = questions[list[i]].q;
+		    document.getElementById("a").innerHTML = questions[list[i]].a;
+		    document.getElementById("b").innerHTML = questions[list[i]].b;
+		    document.getElementById("c").innerHTML = questions[list[i]].c;
+		    document.getElementById("d").innerHTML = questions[list[i]].d;
+		    count++;
+
+		    answers.push(questions[list[i]].ans);
+
+		    remove(list, list[i]);
+
+
+		    if (list.length <= 1 && num == 20){
+		    	clearTimeout(timeout);
+		    	calscore();
+		    }
+		    if (list.length <= 11 && num == 10){
+		    	clearTimeout(timeout);
+		    	calscore();
+		    }
+		} 
+
+		function calscore(){
+		    for (var i = 0; i < selected.length; i++) {
+		    	if (selected[i] == answers[i]){
+		    		score++;
+		    	}
+		    }
+
+		    document.getElementById("two").style.display = "none";
+		    document.getElementById("three").style.display = "block";
+		    document.getElementById("finalscore").innerHTML = score.toString();
+		}
+
+	</script>
+</body>
+</html>
